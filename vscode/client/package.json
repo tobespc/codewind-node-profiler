@@ -1,0 +1,26 @@
+{
+	"name": "codewind-ls-node-prof-vscode-client",
+	"description": "VSCode Client for the Microclomate Language Server for Node.js profiling",
+	"version": "0.1.0",
+	"author": "IBM",
+	"publisher": "IBM",
+	"license": "EPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/microclimate-dev2ops/microclimate-ls-node-prof.git"
+	},
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"scripts": {
+		"test": "node ./node_modules/mocha/bin/_mocha",
+		"update-vscode": "vscode-install",
+		"postinstall": "vscode-install"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^4.1.4"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.21"
+	}
+}
