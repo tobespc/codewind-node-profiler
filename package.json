@@ -18,14 +18,14 @@
 		"Load",
 		"IBM"
 	],
-	"icon": "res/img/microclimate.png",
-	"homepage": "https://microclimate-dev2ops.github.io/",
+	"icon": "res/img/codewind.png",
+	"homepage": "https://www.eclipse.org/codewind/",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/microclimate-dev2ops/microclimate-ls-node-prof"
+		"url": "https://github.com/eclipse/codewind-node-profiler"
 	},
 	"bugs": {
-		"url": "https://github.com/microclimate-dev2ops/microclimate-ls-node-prof/issues"
+		"url": "https://github.com/eclipse/codewind/issues"
 	},
 	"engines": {
 		"vscode": "^1.25.0"
