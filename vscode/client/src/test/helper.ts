@@ -1,11 +1,13 @@
-/********************************************************************************
- * Licensed Materials - Property of IBM "Restricted Materials of IBM"
+/*******************************************************************************
+ * Copyright (c) 2019 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  *
- * Copyright IBM Corp. 2019 All Rights Reserved
- *
- * US Government Users Restricted Rights - Use, duplication or disclosure
- * restricted by GSA ADP Schedule Contract with IBM Corp.
- ******************************************************************************/
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
 'use strict';
 
 import * as path from 'path';
@@ -25,7 +27,7 @@ export let platformEol: string;
 const workspacePath: string = path.resolve(__dirname, 'workspace');
 export async function activate(docUri: vscode.Uri): Promise<void> {
   // The extensionId is `publisher.name` from package.json
-  const ext: Extension<any> = vscode.extensions.getExtension('IBM.codewind-ls-node-prof');
+  const ext: Extension<any> = vscode.extensions.getExtension('IBM.codewind-node-profiler');
   await ext.activate();
   try {
     await vscode.workspace.updateWorkspaceFolders(0, null, { uri: Uri.file(workspacePath) });
