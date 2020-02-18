@@ -1,5 +1,5 @@
 {
-	"name": "codewind-ls-node-prof-vscode-client",
+	"name": "codewind-node-profiler-vscode-client",
 	"description": "VSCode Client for the Microclomate Language Server for Node.js profiling",
 	"version": "0.1.0",
 	"author": "IBM",

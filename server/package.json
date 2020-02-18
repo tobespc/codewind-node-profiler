@@ -1,5 +1,5 @@
 {
-	"name": "codewind-ls-node-prof-server",
+	"name": "codewind-node-profiler-server",
 	"description": "Codewind Language Server for Code Intelligence work",
 	"version": "0.0.1",
 	"author": "IBM",
