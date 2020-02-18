@@ -1,5 +1,5 @@
 {
-	"name": "codewind-ls-node-prof",
+	"name": "codewind-node-prof",
 	"displayName": "Codewind Language Server for Node.js Profiling",
 	"description": "Code Highlighting for Codewind's JavaScript Load Testing",
 	"version": "0.9.0",
