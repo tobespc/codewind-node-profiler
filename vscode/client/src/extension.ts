@@ -56,7 +56,7 @@ export function activate(context: ExtensionContext): void {
   const clientOptions: LanguageClientOptions = {
     // Register the server for javascript files
     documentSelector: [{ scheme: 'file', language: 'javascript' }],
-    outputChannelName: 'Codewind Language Server',
+    outputChannelName: 'Codewind Node.js Profiling',
     synchronize: {
       // Notify the server about file changes to '.clientrc files contained in the workspace
       fileEvents: workspace.createFileSystemWatcher('**/*.{js,json}'),
@@ -65,8 +65,8 @@ export function activate(context: ExtensionContext): void {
 
   // Create the language client and start the client.
   client = new LanguageClient(
-    'codewindLanguageServer',
-    'Codewind Language Server',
+    'codewindNodeProfiling',
+    'Codewind Node.js Profiling',
     serverOptions,
     clientOptions,
   );
@@ -79,7 +79,7 @@ export function activate(context: ExtensionContext): void {
     setStatusBarMessage(newShowProfiling);
 
     window.showInformationMessage(
-      `Codewind Profiling: Method profiling ${ newShowProfiling ? 'enabled' : 'disabled' }.`,
+      `Codewind Node.js Profiler: Method profiling ${ newShowProfiling ? 'enabled' : 'disabled' }.`,
     );
   });
 
