@@ -1,11 +1,13 @@
 /*******************************************************************************
- * Licensed Materials - Property of IBM "Restricted Materials of IBM"
+ * Copyright (c) 2019 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
  *
- * Copyright IBM Corp. 2018 All Rights Reserved
- *
- * US Government Users Restricted Rights - Use, duplication or disclosure
- * restricted by GSA ADP Schedule Contract with IBM Corp.
- ******************************************************************************/
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
 
 import * as path from 'path';
 import {
@@ -54,7 +56,7 @@ export function activate(context: ExtensionContext): void {
   const clientOptions: LanguageClientOptions = {
     // Register the server for javascript files
     documentSelector: [{ scheme: 'file', language: 'javascript' }],
-    outputChannelName: 'Codewind Language Server',
+    outputChannelName: 'Codewind Node.js Profiling',
     synchronize: {
       // Notify the server about file changes to '.clientrc files contained in the workspace
       fileEvents: workspace.createFileSystemWatcher('**/*.{js,json}'),
@@ -63,8 +65,8 @@ export function activate(context: ExtensionContext): void {
 
   // Create the language client and start the client.
   client = new LanguageClient(
-    'codewindLanguageServer',
-    'Codewind Language Server',
+    'codewindNodeProfiling',
+    'Codewind Node.js Profiling',
     serverOptions,
     clientOptions,
   );
@@ -77,7 +79,7 @@ export function activate(context: ExtensionContext): void {
     setStatusBarMessage(newShowProfiling);
 
     window.showInformationMessage(
-      `Codewind Profiling: Method profiling ${ newShowProfiling ? 'enabled' : 'disabled' }.`,
+      `Codewind Node.js Profiler: Method profiling ${ newShowProfiling ? 'enabled' : 'disabled' }.`,
     );
   });
 
